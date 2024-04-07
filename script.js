@@ -1,7 +1,3 @@
-// document.querySelector(".check").addEventListener("click", function () {
-//   console.log("button was clicked");
-// });
-
 // guessnumber..............
 
 let guessNumber = Math.floor(Math.random() * 20) + 1;
@@ -11,7 +7,7 @@ let guessNumber = Math.floor(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 // again..........
-// const reload = location.reload();
+
 document.querySelector(".btn-again").addEventListener("click", function () {
   score = 20;
 
@@ -26,6 +22,7 @@ document.querySelector(".btn-again").addEventListener("click", function () {
 });
 
 //click and value.....................
+
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
   console.log(guess);
@@ -47,7 +44,7 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".highscore").textContent = highscore;
     }
   }
-  // score is too high......
+  // score is too high and low......
   else if (guess !== guessNumber) {
     if (score > 1) {
       document.querySelector(".message").textContent =
@@ -63,22 +60,5 @@ document.querySelector(".check").addEventListener("click", function () {
   }
 });
 
-// score is too low......
-//   else if (guess < guessNumber) {
-//     if (score > 1) {
-//       document.querySelector(".message").textContent = "Too Low 🤳";
-//       score--;
-//       document.querySelector(".score").textContent = score;
-//       document.body.style.backgroundColor = "#222";
-//     } else {
-//       document.querySelector(".message").textContent = " 😢You lost the Game!";
-//       document.querySelector(".score").textContent = 0;
-//       document.body.style.backgroundColor = "red";
-//     }
 
-// change message.................
-// document.querySelector(".message").textContent = "🎉 Correct Number!";
-// console.log(document.querySelector(".message").textContent);
 
-// let inp1 = document.querySelector(".number");
-// console.log(inp1.value);
