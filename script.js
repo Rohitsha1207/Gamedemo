@@ -1,18 +1,18 @@
 // guessnumber..............
 
-let guessNumber = Math.floor(Math.random() * 20) + 1;
+let guessNumber = Math.floor(Math.random() * 5) + 1;
 
 // score...
 
-let score = 20;
+let score = 3;
 let highscore = 0;
 // again..........
 
 document.querySelector(".btn-again").addEventListener("click", function () {
-  score = 20;
+  score = 3;
 
-  guessNumber = Math.floor(Math.random() * 20) + 1;
-  document.querySelector(".message").textContent = "Start Guessing !......";
+  guessNumber = Math.floor(Math.random() * 5) + 1;
+  document.querySelector(".message").textContent = "Start Guessing ! upto 3 Times..";
   document.querySelector(".number").textContent = "?";
   document.querySelector(".guess").value = " ";
   document.querySelector(".score").textContent = score;
@@ -35,7 +35,7 @@ document.querySelector(".check").addEventListener("click", function () {
     score++;
     document.querySelector(".score").textContent = score;
     // console.log("Correct Number! 👏");
-    document.querySelector(".message").textContent = "Correct Number 👌";
+    document.querySelector(".message").textContent = "Correct Number 👌 Click AGAIN to Replay..";
     document.querySelector(".number").textContent = guessNumber;
     document.body.style.backgroundColor = "#60b347";
     //highscore...........
@@ -53,7 +53,7 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = score;
       document.body.style.backgroundColor = "#222";
     } else {
-      document.querySelector(".message").textContent = " 😢You lost the Game!";
+      document.querySelector(".message").textContent = " 😢You lost the Game! Refresh page to play Again..";
       document.querySelector(".score").textContent = 0;
       document.body.style.backgroundColor = "red";
     }
